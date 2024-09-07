@@ -47,6 +47,7 @@ class LinkedList:
             output += f"{curr.value} -> "
             curr = curr.next
         print(output.rstrip(" -> "))
+        return output.rstrip(" -> ")
 
     def append_values(self, *args) -> None:
         for arg in args:
@@ -123,3 +124,16 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def removeNthFromEnd(self, head, n):
+    fast = slow = head
+    for _ in range(n):
+        fast = fast.next
+    if not fast:
+        return head.next
+    while fast.next:
+        fast = fast.next
+        slow = slow.next
+    slow.next = slow.next.next
+    return head
