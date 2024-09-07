@@ -4,7 +4,7 @@
 # print fizzbuzz if its divisible by 3 and 5
 
 
-for i in range(1,101):
+for i in range(1, 101):
     str = ""
     if i % 3 == 0:
         str += "Fizz"
@@ -14,6 +14,6 @@ for i in range(1,101):
         print(i, str)
 
 
-l = [1,2,3,4,45,4]
+l = [1, 2, 3, 4, 45, 4]
 
 print(l[-2:])
